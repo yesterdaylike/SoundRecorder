@@ -14,8 +14,7 @@
      limitations under the License.
 -->
 
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.android.soundrecorder">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="421" android:versionName="4.2.1" package="com.android.soundrecorder">
 
     <original-package android:name="com.android.soundrecorder" />
 
