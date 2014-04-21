@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:baselineAligned="false"
+    android:orientation="horizontal" >
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_weight="1" >
+
+        <!--<com.android.soundrecorder.TimerTextView
+            android:id="@+id/timerView"
+            style="@android:style/TextAppearance.Large"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="56sp"
+            android:layout_centerInParent="true"
+            android:background="@android:color/transparent"
+            android:gravity="center" />
+				-->
+        <com.android.soundrecorder.TimerTextView
+            android:id="@+id/timerView"
+            style="@android:style/TextAppearance.Large"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="56sp"
+            android:gravity="center"
+            android:layout_centerInParent="true"
+            android:background="@drawable/clock_analog_dial"
+            android:onClick="onClickAllRecordButton" />
+
+        <com.android.soundrecorder.VUMeter
+            android:id="@+id/uvMeter"
+            android:layout_width="200dp"
+            android:layout_height="80dp"
+            android:layout_alignTop="@+id/timerView"
+            android:layout_centerHorizontal="true" />
+
+        <TextView
+            android:id="@+id/stateMessage2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/timerView"
+            android:layout_marginBottom="20dp"
+            style="@android:style/TextAppearance.Medium"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:text="@string/recording" />
+
+        <TextView
+            android:id="@+id/stateMessage1"
+            style="@android:style/TextAppearance.Small"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/stateMessage2"
+            android:gravity="center" />
+
+        <ProgressBar
+            android:id="@+id/stateProgressBar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:progressDrawable="@drawable/data_usage_bar"
+            android:max="100"
+            android:orientation="horizontal"
+            android:progress="0" />
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/recordList"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="120dp"
+        android:layout_weight="1"
+        android:paddingBottom="40dp"
+        android:paddingTop="40dp" />
+
+</LinearLayout>
